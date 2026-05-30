@@ -2,6 +2,12 @@ from openai import APIConnectionError
 
 from .client import build_client, DEFAULT_MODEL
 
+SYSTEM_PROMPT = (
+    "You are a helpful assistant. Answer only what the user actually asked, "
+    "and keep it short. Don't volunteer extra facts, tangents, or counts they "
+    "didn't ask for. If you're unsure, say so instead of making something up."
+)
+
 
 def stream_reply(client, model, messages, temperature):
     out = []
@@ -22,7 +28,7 @@ def stream_reply(client, model, messages, temperature):
 
 def run(model=DEFAULT_MODEL, temperature=0.6):
     client = build_client()
-    messages = [{"role": "system", "content": "You are a helpful assistant."}]
+    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
 
     print(f"connected to {model}. /reset to clear, /exit to quit.\n")
 

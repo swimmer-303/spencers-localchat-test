@@ -23,3 +23,11 @@ python ask.py "explain mixture of experts in a paragraph"
 ```
 
 `/reset` clears history, `/exit` quits. `python chat.py --model llama3.2` for a smaller/faster one.
+
+## web ui
+
+```bash
+python web.py
+```
+
+then open http://localhost:8000. renders the bot's answers as markdown. markdown lib is vendored in static/ so it works offline too.
