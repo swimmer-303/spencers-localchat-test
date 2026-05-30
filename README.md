@@ -2,14 +2,14 @@
 
 terminal chat with a local LLM, running offline through ollama. no api key, no network.
 
-defaults to llama3.1:8b which is fine on 16gb. swap with `--model` or `OLLAMA_MODEL`.
+defaults to qwen3:30b (a 30b MoE, ~3b active). swap with `--model` or `OLLAMA_MODEL`.
 
 ## setup
 
 ```bash
 brew install ollama
 ollama serve &
-ollama pull llama3.1:8b
+ollama pull qwen3:30b
 
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
