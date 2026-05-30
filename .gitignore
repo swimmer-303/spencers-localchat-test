@@ -1,0 +1,20 @@
+# Local agent config
+CLAUDE.md
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
